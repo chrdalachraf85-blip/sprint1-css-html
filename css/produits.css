@@ -42,6 +42,38 @@
   font-weight: bold;
   margin: 0;
 }
-#h11{
+h2{
   text-align: center;
+}
+#newcolor{
+  color: var(--couleur-figue);
+}
+
+
+/* ----- Grille des produits : 3 par ligne ----- */
+
+.cartes {
+  display: grid;
+  grid-template-columns: 1fr;          /* téléphone : 1 par ligne */
+}
+
+.cartes .carte {
+  max-width: none;                     /* la grille décide de la largeur */
+}
+
+.carte img {
+  aspect-ratio: 4 / 3;                 /* toutes les images ont la même hauteur */
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .cartes {
+    grid-template-columns: repeat(2, 1fr);   /* tablette : 2 par ligne */
+  }
+}
+
+@media (min-width: 1024px) {
+  .cartes {
+    grid-template-columns: repeat(3, 1fr);   /* ordinateur : 3 par ligne */
+  }
 }
