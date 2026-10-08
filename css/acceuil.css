@@ -1,0 +1,64 @@
+/* ===================================
+   Thimdrine : page d'accueil
+   =================================== */
+
+/* ----- Bandeau d'accroche ----- */
+
+.hero {
+  padding: 40px 0;
+  background-color: var(--couleur-blanc);
+}
+
+.surtitre {
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--couleur-figue);
+}
+
+.accroche {
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: var(--couleur-terre-douce);
+}
+
+.boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-image {
+  margin-top: 40px;
+}
+
+
+/* ----- Présentation ----- */
+
+.presentation {
+  max-width: 768px;
+}
+
+
+/* ----- Ordinateur : à partir de 1024 px de large ----- */
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 64px 0;
+  }
+
+  .hero-contenu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-texte,
+  .hero-image {
+    flex: 1;
+  }
+
+  .hero-image {
+    margin-top: 0;
+  }
+}
