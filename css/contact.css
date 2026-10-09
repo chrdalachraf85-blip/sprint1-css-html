@@ -12,7 +12,6 @@
   object-fit: cover;
 }
 
-/* Couche sombre pour lire le texte sur la photo */
 .banner::after {
   content: "";
   position: absolute;
@@ -20,7 +19,6 @@
   background: rgba(0, 0, 0, 0.35);
 }
 
-/* Texte centré sur l'image */
 .banner-content {
   position: absolute;
   top: 50%;
@@ -56,9 +54,6 @@
 .contact h2{
     text-align: center;
 }
-/* ===================================
-   Thimdrine : page Contact, formulaire
-   =================================== */
 
 .contact {
   display: grid;
@@ -69,9 +64,8 @@
   padding: 40px 16px 64px;
 }
 
-/* Titre "Contact us" : barre verte, alignée à gauche */
 .contact h2 {
-  grid-column: 1 / -1;            /* occupe les deux colonnes */
+  grid-column: 1 / -1;            
   max-width: 490px;
   margin: 0;
   padding: 8px 24px;
@@ -146,7 +140,64 @@
   }
 }
 
+.order button[type="submit"] {
+    grid-column: 2;
+    justify-self: start;
+    width: 180px;
+    padding: 10px 20px;
 
+    background-color: #8A2846;
+    color: white;
+
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order button[type="submit"]:hover {
+    background-color: #6F2039;
+    transform: translateY(-2px);
+}
+
+
+.contact-input {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.contact-input button[type="submit"] {
+    grid-column: 2;
+    justify-self: start;
+
+    width: 180px;
+    padding: 10px 20px;
+
+    background-color: #8A2846;
+    color: white;
+
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-input button[type="submit"]:hover {
+    background-color: #6F2039;
+    transform: translateY(-2px);
+}
 
 
 

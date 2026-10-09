@@ -7,13 +7,13 @@
     text-align: center;
 }
 .bannercolor h1{
-    color: var(--couleur-terre);
+    color: var(--couleur-figue);
     text-transform: uppercase;
         font-family: "Isometra", system-ui;
 
 }
 .bannercolor p {
-    color: var(--couleur-figue);
+    color: var(--couleur-terre);
     font-size: 50px;
     font-family: "Isometra", system-ui;
 }
@@ -32,7 +32,6 @@ h2{
     line-height: 1.25;
     text-align: center;
     color: var(--couleur-terre);
-    border: 12px solid var(--couleur-thym);
 }
 .second-h2{
     text-align: center;

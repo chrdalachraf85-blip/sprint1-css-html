@@ -32,7 +32,7 @@
 
 <main>
     <section class="banner">
-      <img class="banner-img" src="images/contact-banner.jpg" alt="Une femme récoltant du miel">
+      <img class="banner-img" src="images/contact-banner.jpg" alt="wommens working">
       <div class="banner-content">
           <p class="banner-subtitle">COOPÉRATIVE THIMDRINE</p>
           <h1 class="banner-title">Restons en contact</h1>
@@ -42,19 +42,20 @@
 </main>
 <section class="contact">
     <h2>Contact us</h2>
-    <div class="contact-input">
+    <form class="contact-input">
         <label for="name">Name</label>
         <input type="text" id="name" name="contact" placeholder="type your name here" required>
         <label for="email">Email</label>
-        <input type="text" id="email" name="contact" placeholder="example@gmail.com" required>
+        <input type="email" id="email" name="contact" placeholder="example@gmail.com" required>
         <label for="number">Number</label>
         <input type="number" id="number" name="contact" placeholder="064584725548" required>
         <label for="message">Message</label>
         <textarea name="contact" id="message" rows="5" cols="50" placeholder="type a message for us..."></textarea>
-    </div>
-    <div class="order">
+        <button type="submit"> Submit</button>
+    </form>
+    <form class="order">
         <label for="product">Product</label>
-        <select id="product" name="order">
+        <select id="product" name="order" required>
             <option value="">--please choose--</option>
             <option value="Amlou d'amande">Amlou d'amande</option>
             <option value="Confiture d'abricot">Confiture d'abricot</option>
@@ -62,12 +63,17 @@
             <option value="Confiture de figue de barbarie">Confiture de figue de barbarie</option>
             <option value="Miel de thym">Miel de thym</option>
             <option value="Huile d'olive extra vierge">Huile d'olive extra vierge</option>
+            
         </select>
+        
         <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" name="order" min="1" max="100">
+        <input type="number" id="quantity" required name="order" min="1" max="100">
         <label for="complains">Complains</label>
-        <textarea name="order" id="complains" placeholder="type your complains here..."></textarea>
-    </div>
+        <textarea name="order" id="complains"  placeholder="type your complains here..."></textarea>
+        <button type="submit"> Submit</button>
+
+    </form>
+
 </section>
 
 
@@ -98,7 +104,7 @@
       <div>
         <h2>Plan du site</h2>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
+          <li><a href="acceuil.html">Accueil</a></li>
           <li><a href="produits.html">Nos produits</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
