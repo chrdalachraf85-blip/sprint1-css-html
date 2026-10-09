@@ -12,14 +12,11 @@
         font-family: "Isometra", system-ui;
 
 }
-.bannercolor p {
-    color: var(--couleur-terre);
-    font-size: 50px;
-    font-family: "Isometra", system-ui;
-}
+   .bannercolor p {
+     font-size: clamp(20px, 4vw, 50px);
+   }
 h2{
     color:var(--couleur-miel) ;
-    margin-left: 60px;
 }
 .title-history {
   text-align: left;
@@ -28,7 +25,7 @@ h2{
 }
 .texte-history{
     font-size: clamp(16px, 3.8vw, 49px);
-    font-weight: 70;
+    font-weight: 700;
     line-height: 1.25;
     text-align: center;
     color: var(--couleur-terre);

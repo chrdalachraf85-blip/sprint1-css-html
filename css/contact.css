@@ -141,7 +141,7 @@
 }
 
 .order button[type="submit"] {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: start;
     width: 180px;
     padding: 10px 20px;
