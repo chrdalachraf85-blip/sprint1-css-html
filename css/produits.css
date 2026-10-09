@@ -47,14 +47,18 @@ h2{
 }
 
 
-        
+
 .cartes {
-  display: grid;
-  grid-template-columns: 1fr;         
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;   
+  gap: 24px;
 }
 
 .cartes .carte {
-  max-width: none;                    
+  flex: 0 0 100%;
+  min-width: 0;
+  max-width: none;
 }
 
 .carte img {
@@ -63,13 +67,13 @@ h2{
 }
 
 @media (min-width: 640px) {
-  .cartes {
-    grid-template-columns: repeat(2, 1fr);  
+  .cartes .carte {
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
 @media (min-width: 1024px) {
-  .cartes {
-    grid-template-columns: repeat(3, 1fr);  
+  .cartes .carte {
+    flex-basis: calc((100% - 48px) / 3);
   }
 }

@@ -51,23 +51,26 @@
   font-size: clamp(15px, 1.6vw, 18px);
   line-height: 1.5;
 }
-.contact h2{
-    text-align: center;
-}
+
+
+/* ----- Section contact : flexbox ----- */
 
 .contact {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 32px 48px;
   max-width: 1152px;
   margin: 0 auto;
   padding: 40px 16px 64px;
 }
 
+/* Le titre occupe sa propre ligne (490px max), les deux colonnes passent dessous.
+   La marge droite force le retour à la ligne, car max-width limite sa taille. */
 .contact h2 {
-  grid-column: 1 / -1;            
-  max-width: 490px;
-  margin: 0;
+  flex: 0 0 auto;
+  width: 490px;
+  max-width: 100%;
+  margin: 0 max(0px, calc(100% - 490px)) 0 0;
   padding: 8px 24px;
   border: 1px solid var(--couleur-thym-fonce);
   border-radius: 6px;
@@ -77,14 +80,24 @@
   color: var(--couleur-blanc);
 }
 
-
-
+/* Les deux colonnes (formulaire contact + formulaire commande) */
 .contact-input,
 .order {
-  display: grid;
-  grid-template-columns: 1fr;     
-  gap: 8px;
-  align-content: start;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;               /* mobile : une colonne */
+  min-width: 0;
+  gap: 8px 16px;
+  align-content: flex-start;
+}
+
+/* Mobile : label et champ chacun sur toute la largeur */
+.contact label,
+.contact input,
+.contact select,
+.contact textarea {
+  flex: 0 0 100%;
+  min-width: 0;
 }
 
 .contact label {
@@ -118,93 +131,74 @@
 }
 
 
+/* ----- Bouton d'envoi (commun aux deux formulaires) ----- */
+
+.contact-input button[type="submit"],
+.order button[type="submit"] {
+  flex: 0 0 180px;
+  width: 180px;
+  padding: 10px 20px;
+
+  background-color: #8A2846;
+  color: white;
+
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-input button[type="submit"]:hover,
+.order button[type="submit"]:hover {
+  background-color: #6F2039;
+  transform: translateY(-2px);
+}
+
+
+/* ----- Ordinateur : deux colonnes, label à gauche / champ à droite ----- */
 
 @media (min-width: 1024px) {
   .contact {
-    grid-template-columns: 1fr 1fr;
     padding-left: 24px;
     padding-right: 24px;
   }
 
   .contact-input,
   .order {
-    grid-template-columns: 120px 1fr;   
+    flex: 1 1 calc(50% - 24px);   /* 50% moins la moitié du gap de 48px */
     gap: 20px 16px;
     align-items: center;
   }
 
+  /* label (130px) + gap (16px) + champ (le reste) = 100% de la ligne */
+  .contact label {
+    flex: 0 0 130px;
+  }
+
+  .contact input,
+  .contact select,
+  .contact textarea {
+    flex: 1 1 calc(100% - 146px);
+  }
+
+  /* Les labels des zones de texte restent en haut */
   .contact label[for="message"],
   .contact label[for="complains"] {
-    align-self: start;
+    align-self: flex-start;
     padding-top: 10px;
   }
+
+  /* Le bouton s'aligne sous les champs (130px + 16px de gap) */
+  .contact-input button[type="submit"],
+  .order button[type="submit"] {
+    margin-left: 146px;
+  }
 }
-
-.order button[type="submit"] {
-    grid-column: 1;
-    justify-self: start;
-    width: 180px;
-    padding: 10px 20px;
-
-    background-color: #8A2846;
-    color: white;
-
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    font-weight: 700;
-
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.order button[type="submit"]:hover {
-    background-color: #6F2039;
-    transform: translateY(-2px);
-}
-
-
-.contact-input {
-    display: grid;
-    grid-template-columns: 130px minmax(0, 1fr);
-    gap: 20px;
-    align-items: start;
-}
-
-.contact-input button[type="submit"] {
-    grid-column: 2;
-    justify-self: start;
-
-    width: 180px;
-    padding: 10px 20px;
-
-    background-color: #8A2846;
-    color: white;
-
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    font-weight: 700;
-
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-input button[type="submit"]:hover {
-    background-color: #6F2039;
-    transform: translateY(-2px);
-}
-
-
-
-
-
-
-
 
 
 @media (max-width: 639px) {
