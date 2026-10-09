@@ -1,0 +1,93 @@
+.bannercolor{
+    background: linear-gradient(var(--couleur-thym),var(--couleur-figue));
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 64px 16px;
+
+    text-align: center;
+}
+.bannercolor h1{
+    color: var(--couleur-terre);
+    text-transform: uppercase;
+        font-family: "Isometra", system-ui;
+
+}
+.bannercolor p {
+    color: var(--couleur-figue);
+    font-size: 50px;
+    font-family: "Isometra", system-ui;
+}
+h2{
+    color:var(--couleur-miel) ;
+    margin-left: 60px;
+}
+.title-history {
+  text-align: left;
+  text-transform: none;            
+  color: var(--couleur-miel);
+}
+.texte-history{
+    font-size: clamp(16px, 3.8vw, 49px);
+    font-weight: 70;
+    line-height: 1.25;
+    text-align: center;
+    color: var(--couleur-terre);
+    border: 12px solid var(--couleur-thym);
+}
+.second-h2{
+    text-align: center;
+    color: var(--couleur-thym);
+}
+
+.valeurs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.valeurs img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+}
+
+
+
+.chiffres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chiffre {
+  padding: 20px 36px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.chiffre-figue {
+  background-color: var(--couleur-figue);
+  color: var(--couleur-miel);
+}
+
+.chiffre-thym {
+  background-color: var(--couleur-thym);
+  color: var(--couleur-miel);
+}
+
+.chiffre-terre {
+  background-color: var(--couleur-terre);
+  color: var(--couleur-miel);
+}
+
+.chiffre-miel {
+  background-color: var(--couleur-miel);
+  color: var(--couleur-figue);
+}

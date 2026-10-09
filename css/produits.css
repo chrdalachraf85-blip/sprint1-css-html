@@ -1,22 +1,19 @@
-/* Container section setup */
 .banner {
   position: relative;
   width: 100%;
-  max-width: 1302px; /* Matches Figma width */
+  max-width: 1302px; 
   margin: 0 auto;
-  border-radius: 52px; /* Corner radius from Figma */
-  overflow: hidden; /* Clips image corners to match radius */
+  border-radius: 52px; 
+  overflow: hidden;
 }
 
-/* Image scaling */
 .banner-img {
   width: 100%;
-  height: 304px; /* Matches Figma height */
+  height: 304px;
   object-fit: cover;
   display: block;
 }
 
-/* Text overlay positioning */
 .banner-content {
   position: absolute;
   top: 50%;
@@ -24,11 +21,11 @@
   transform: translate(-50%, -50%);
   text-align: center;
   
-  color: #ffffff;
+  color: var(--couleur-blanc);
   width: 90%;
 }
 .banner-content h1 {
-  color: #ffffff;
+  color: var(--couleur-blanc);
 }
 .banner-subtitle {
   font-size: 12px;
@@ -50,30 +47,29 @@ h2{
 }
 
 
-/* ----- Grille des produits : 3 par ligne ----- */
-
+        
 .cartes {
   display: grid;
-  grid-template-columns: 1fr;          /* téléphone : 1 par ligne */
+  grid-template-columns: 1fr;         
 }
 
 .cartes .carte {
-  max-width: none;                     /* la grille décide de la largeur */
+  max-width: none;                    
 }
 
 .carte img {
-  aspect-ratio: 4 / 3;                 /* toutes les images ont la même hauteur */
+  aspect-ratio: 4 / 3;                
   object-fit: cover;
 }
 
 @media (min-width: 640px) {
   .cartes {
-    grid-template-columns: repeat(2, 1fr);   /* tablette : 2 par ligne */
+    grid-template-columns: repeat(2, 1fr);  
   }
 }
 
 @media (min-width: 1024px) {
   .cartes {
-    grid-template-columns: repeat(3, 1fr);   /* ordinateur : 3 par ligne */
+    grid-template-columns: repeat(3, 1fr);  
   }
 }
