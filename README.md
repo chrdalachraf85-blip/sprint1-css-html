@@ -10,7 +10,7 @@ Site vitrine responsive conçu et développé pour la **Coopérative Thimdrine**
 
 * **Maquette Figma** : [Lien vers la maquette Figma](https://www.figma.com/design/Cy4ik0pqJzKmxNujivD7c2/Thimdrine---site-vitrine-d%E2%80%99une-coop%C3%A9rative-du-Rif--Copy-?node-id=2049-862&t=62hXoxgxC2ocNd0L-1)
 
-* **Gestion de projet (Jira / GitHub Projects)** : [Lien vers le Kanban](https://github.com/users/chrdalachraf85-blip/projects/1) *(Remplacez par votre lien Board)*
+* **Gestion de projet (Jira / GitHub Projects)** : [Lien vers le Kanban](https://github.com/users/chrdalachraf85-blip/projects/1) 
 
 ## 📑 Sommaire
 
